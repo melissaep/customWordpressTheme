@@ -1,0 +1,79 @@
+// **************************
+// Shared Styles
+// **************************
+
+header,
+footer {
+	background: $grey;
+
+	text-transform: uppercase;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.menu-footer-menu-container,
+.menu-social-media-links-container,
+.menu-header-menu-container {
+	margin: 20px;
+}
+
+.menu {
+
+}
+
+
+// **************************
+// Header Styles
+// **************************
+
+h1 {
+	@include fontSizer(40);
+	font-weight: 400;
+	letter-spacing: 12px;
+
+	text-transform: uppercase;
+	text-align: center;
+	
+	position: relative;
+	margin-bottom: 20px;
+	&::after {
+		position: absolute;
+		transform: translate(-50%, 0);
+		left: 50%;
+		bottom: -10px;
+		content: ' ';
+		display: block;
+		margin: 0 auto;
+		height: 2px;
+		width: 65%;
+		background: $pink;
+	}
+	a {
+		color: black;
+		&:hover {
+			color: darken($grey, 60);
+		}
+	}
+}
+
+h2 {
+	@include fontSizer(18);
+	font-family: $secondFont;
+	font-weight: 100;
+
+	text-align: center;
+	text-transform: none;
+}
+
+
+// **************************
+// Footer Styles
+// **************************
+
+footer {
+	clear: both;
+	background: $grey;
+}

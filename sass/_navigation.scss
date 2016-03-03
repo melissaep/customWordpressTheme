@@ -5,10 +5,21 @@ ul.menu {
 		display: inline;
 		margin-right: 10px;
 		a {
-			color: #333;
-			padding: 10px;
-			background: #333;
-			color: white;
+			color: black;
+			padding: 5px;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+				color: $pink;
+			}
+
 		}
+	}
+	.current-menu-item > a{
+		border-bottom: 1px $pink solid;
+
+	}
+	.menu-item-has-children > ul {
+		display: none;
 	}
 }

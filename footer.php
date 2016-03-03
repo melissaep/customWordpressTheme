@@ -1,7 +1,17 @@
 <footer>
+	
+	<?php wp_nav_menu( array(
+      'theme_location' => 'social'
+    )); ?>
+
+	<?php wp_nav_menu( array(
+	  'theme_location' => 'footer'
+	)); ?>
+
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; <?php echo date('Y'); ?> Designed and developed by <a href="http://melissaperry.io">Melissa Perry</a></p>
   </div>
+  
 </footer>
 
 <script>

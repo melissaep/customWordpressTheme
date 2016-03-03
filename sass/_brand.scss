@@ -1,0 +1,33 @@
+// **************************
+// Font Styles
+// **************************
+
+
+$secondFont: 'Old Standard TT', serif;
+$mainFont: 'Oswald', sans-serif;
+
+
+// **************************
+// Colours
+// **************************
+
+$pink: #FF529F;
+$grey: #EEEEEE;
+
+// **************************
+// Mixins
+// **************************
+
+@mixin fontSizer($scale) {
+	font-size: $scale * 1px;
+	font-size: ($scale / 10) * 1rem;
+}
+
+@mixin centeredSection {
+	height: 100vh;
+	min-height: 500px;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
