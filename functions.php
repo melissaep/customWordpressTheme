@@ -77,6 +77,15 @@ function hackeryou_scripts() {
     true //load in footer
   );
 
+
+  wp_enqueue_script(
+    'flicity', //handle
+    get_template_directory_uri() . '/js/flickity.pkgd.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+
   wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source

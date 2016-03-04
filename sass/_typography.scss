@@ -1,8 +1,8 @@
 a {
-	color: $pink;
+	color: darken($grey, 40);
 	text-decoration: none;
 	&:hover {
-		color: darken($pink, 20);
+		color: $pink;
 	}
 }
 

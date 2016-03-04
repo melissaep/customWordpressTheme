@@ -1,12 +1,17 @@
+// **************************
+// Menu Styles
+// **************************
+
 ul.menu {
 	margin: 0;
 	padding: 0;
 	li {
 		display: inline;
-		margin-right: 10px;
+		margin:0 5px;
 		a {
 			color: black;
 			padding: 5px;
+			margin: 0 30px;
 			border-bottom: 1px solid transparent;
 
 			&:hover {
@@ -15,11 +20,47 @@ ul.menu {
 
 		}
 	}
-	.current-menu-item > a{
-		border-bottom: 1px $pink solid;
+	
+}
+.menu-header-menu-container .current-menu-item > a{
+	border-bottom: 1px $pink solid;
 
-	}
-	.menu-item-has-children > ul {
+}
+
+// **************************
+// Sub-Menu Styles
+// **************************
+
+.menu-item-has-children {
+	position: relative;
+	z-index: 1;
+	& > ul {
 		display: none;
+		@include fontSizer(12);
+		text-align: center;
+
+		background: rgba(255,255,255,0.75);
+		border: 1px solid $grey;
+		
+		padding: 0;
+		padding-top: 35px;
+		margin: 0;
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0);
+		top: -5px;
+		z-index: -1;
+		li {
+			padding: 0;
+			padding-bottom: 10px;
+			margin: 0;
+			display: block;
+		}
+	}
+}
+
+.menu-item-has-children:hover {
+	& > ul {
+		display: block;
 	}
 }

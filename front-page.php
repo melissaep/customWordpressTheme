@@ -6,8 +6,19 @@
 
 get_header();  ?>
 
+
 <div class="main">
   <div class="container">
+
+	<div class="gallery js-flickity">
+	  <div class="gallery-cell"><img src="http://unsplash.it/400/400" alt=""></div>
+	  <div class="gallery-cell"><img src="http://unsplash.it/400/400" alt=""></div>
+	  <div class="gallery-cell"><img src="http://unsplash.it/400/400" alt=""></div>
+	  <div class="gallery-cell"><img src="http://unsplash.it/400/400" alt=""></div>
+	  <div class="gallery-cell"><img src="http://unsplash.it/400/400" alt=""></div>
+	  <div class="gallery-cell"><img src="http://unsplash.it/400/400" alt=""></div>
+	</div>
+	
     <?php // Start the loop ?>
     <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
