@@ -1,0 +1,97 @@
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+
+.gallery {
+	height: 400px;
+	width: 70%;
+	margin: 10px auto;
+	border: 1px solid $grey;
+}
+
+.gallery-cell {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  img {
+  	width: 100%;
+  }
+  .overlay {
+  	position: absolute;
+  	background: rgba(255,255,255,0.79);
+  	height: 100%;
+  	width: 250px;
+  	left: 10%;
+  	z-index: 5;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: center;
+  	align-items: center;
+  }
+}
+
+.gallery-cell .overlay {
+	.title {
+		border-top: 1px solid rgba(0,0,0,0.2);
+		border-bottom: 1px solid rgba(0,0,0,0.2);
+		width: 75%;
+		text-align: center;
+		padding: 20px 0;
+		a {
+			color: black;
+			text-transform: uppercase;
+			@include fontSizer(30);
+			&:hover {
+				color: $pink;
+			}
+		}
+	}
+	.tags {
+		@include fontSizer(12);
+		color: $pink;
+		span {
+			padding: 0 6px;
+		}
+		a {
+			color: $pink;
+			&:hover {
+				color: darken($grey, 30);
+			}
+		}
+	}
+	.date {
+		font-family: $secondFont;
+		@include fontSizer(12);
+
+	}
+}
+
+.flickity-prev-next-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 0;
+  background: $pink;
+}
+.flickity-prev-next-button:hover {
+  background: lighten($pink, 20);
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -30px;
+}
+.flickity-prev-next-button.next {
+  right: -30px;
+}
