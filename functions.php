@@ -79,7 +79,7 @@ function hackeryou_scripts() {
 
 
   wp_enqueue_script(
-    'flicity', //handle
+    'flickity', //handle
     get_template_directory_uri() . '/js/flickity.pkgd.js', //source
     false, //dependencies
     null, // version number

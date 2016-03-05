@@ -3,7 +3,7 @@
 <div class="main">
   <div class="container">
 
-    <h1>Not Found</h1>
+    <h2>Not Found</h2>
     <p>Apologies, but the page you requested could not be found. Perhaps searching will help.</p>
     <?php get_search_form(); ?>
 

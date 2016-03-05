@@ -20,9 +20,9 @@
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
-    <h2>
+    <p class="description">
       <?php bloginfo('description'); ?>
-    </h2>
+    </p>
 
 
     <?php wp_nav_menu( array(
