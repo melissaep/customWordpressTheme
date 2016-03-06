@@ -16,28 +16,38 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-		<p><?php the_date(); ?></p>
-			<h2 class="entry-title">
+		<article class="postPreview" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<div class="date">
+			<p><?php the_date(); ?></p>
+		</div>
+			<h3 class="entry-title">
         <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
           <?php the_title(); ?>
         </a>
-      </h2>
-      <p><?php the_category(', '); ?></p>
+      </h3>
+      <div class="category">
+      	<p><?php the_category('<span>|</span>'); ?></p>
+      </div>
 
 			<section class="entry-content">
-				<?php the_content('Continue reading <span class="meta-nav">&rarr;</span>'); ?>
+				<img src="<?php echo hackeryou_get_thumbnail_url(); ?>" alt="">
+				<?php the_excerpt(); ?>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',
           'after' => '</div>'
         )); ?>
 			</section><!-- .entry-content -->
 
-			<footer>
-				<p><?php the_tags('Tags: ', ', ', '<br>'); ?></p>
-        <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p>
-        <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p>
-			</footer>
+			<section class="postFooter">
+			<div>
+				<a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
+			</div>
+			<div>
+				<p><?php the_tags('', '<span>|</span>', '<br>'); ?></p>
+			</div>
+        <!-- <p><?php comments_popup_link('Respond to this post &raquo;', '1 Response &raquo;', '% Responses &raquo;'); ?></p> -->
+        <!-- <p><?php edit_post_link( 'Edit', '<span class="edit-link">', '</span>' ); ?></p> -->
+			</section>
 
 		</article><!-- #post-## -->
 

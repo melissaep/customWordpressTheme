@@ -372,13 +372,15 @@ get_header();  ?>
     </div> <!-- /.container -->
     </section> <!-- /.recent --> 
     
-    <section class="instagram">
-      <h3>The latest on our instagram</h3>
-      <div class="background"></div>
-      <div class="feed">
-        <?php the_content(); ?>
-      </div>
-    </section>
+    <div class="container">
+      <section class="instagram">
+        <h3>The latest on our instagram</h3>
+        <div class="background"></div>
+        <div class="feed">
+          <?php the_content(); ?>
+        </div>
+      </section>
+    </div>
     <?php endwhile; // end the loop?>
 
 
