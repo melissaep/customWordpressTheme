@@ -58,6 +58,12 @@
 
 <?php // Display navigation to next/previous pages when applicable ?>
 <?php if (  $wp_query->max_num_pages > 1 ) : ?>
-  <p class="alignleft"><?php next_posts_link('&laquo; Older Entries'); ?></p>
-  <p class="alignright"><?php previous_posts_link('Newer Entries &raquo;'); ?></p>
+  <div class="entryNav">
+  	<div class="older direction">
+  		<p class="alignleft"><?php next_posts_link('Older Posts<i class="fa fa-angle-double-left"></i>'); ?></p>
+  	</div>
+  	<div class="newer direction">
+  		<p class="alignright"><?php previous_posts_link('Newer Posts<i class="fa fa-angle-double-right"></i>'); ?></p>
+  	</div>
+  </div>
 <?php endif; ?>

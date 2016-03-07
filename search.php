@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 <div class="main">
-	<div class="container">
+	<div class="container page">
 
 		<div class="content">
 			<?php if ( have_posts() ) : ?>
 
-				<h1>Search Results for: <?php echo get_search_query(); ?></h1>
+				<h2>Search Results for: <?php echo get_search_query(); ?></h2>
 				<?php get_template_part( 'loop', 'search' ); ?>
 
 			<?php else : ?>

@@ -87,6 +87,14 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+    'sticky', //handle
+    get_template_directory_uri() . '/js/jquery.sticky.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
     array( 'jquery', 'plugins' ), //dependencies
@@ -184,8 +192,8 @@ function hackeryou_widgets_init() {
 		'description' => 'The primary widget area',
 		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
 		'after_widget' => '</li>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<div class="title"><h3 class="widget-title">',
+		'after_title' => '</h3></div>',
 	) );
 
 }
@@ -295,4 +303,11 @@ function hackeryou_get_thumbnail_url($post) {
 	$imageID = get_post_thumbnail_id($post->ID);
 	$imageURL = wp_get_attachment_URL($imageID);
 	return $imageURL;
+}
+
+// Function to get rid of inline styling on tag cloud
+add_filter('wp_generate_tag_cloud', 'xf_tag_cloud',10,3);
+
+function xf_tag_cloud($tag_string){
+   return preg_replace("/style='font-size:.+pt;'/", '', $tag_string);
 }

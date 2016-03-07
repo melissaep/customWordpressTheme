@@ -16,12 +16,17 @@ p {
 /*blockquotes*/
 
 blockquote {
-	background: #F7F7F7;
-	margin: 0;
+	// background: #F7F7F7;
+	margin: 0 0 0 20px;
 	padding: 20px;
+	border-left: 2px solid $pink;
 	p {
-		margin-top: 0;
+		margin: 0;
 	}
+}
+
+.entry-content blockquote p {
+	font-family: $mainFont;
 }
 
 /*tables*/

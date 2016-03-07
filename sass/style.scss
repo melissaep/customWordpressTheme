@@ -16,6 +16,9 @@
 @import 'headerFooter';
 @import 'flickity';
 @import 'flickityCustom';
+@import 'entryNav';
+@import 'blogPost';
+@import 'pageFull';
 
 /*
 ====================================
@@ -48,6 +51,7 @@ body {
 	float: left;
 	width: 65%;
 	margin-right: 5%;
+	padding: 0 10px;
 }
 
 .full {
@@ -126,6 +130,7 @@ h3 {
 	.mostRecentGrouping {
 		display: flex;
 		flex-direction: column;
+		width: 22%;
 		.recentTitle {
 			position: relative;
 			margin-bottom: 3px;
@@ -153,7 +158,7 @@ h3 {
 .mostRecent {
   background: $grey;
   height: 300px;
-  width: 200px;
+  width: 100%;
   position: relative;
   .image {
   	width: 100%;
@@ -210,7 +215,12 @@ h3 {
 		border-bottom: 1px solid rgba(0,0,0,0.2);
 		@include fontSizer(10);
 		color: $pink;
-		text-align: center;		
+		text-align: center;	
+		p {
+		    display: flex;
+		    flex-flow: row wrap;
+		    justify-content: center;
+		}	
 		a {
 			color: $pink;
 			padding: 0px 5px;
@@ -311,7 +321,7 @@ article.postPreview {
 			position: absolute;
 			display: block;
 			height: 1px;
-			background: black;
+			background: darken($grey, 20);
 			width: 100%;
 			top: 50%;
 			left: 0;
@@ -349,51 +359,53 @@ article.postPreview {
 			}
 		}
 	}
+}
 
-	.entry-content {
-		padding: 15px;
-		p {
-			font-family: $secondFont;
-			@include fontSizer(14);
-		}
-		div {
-			display: flex;
-			justify-content: center;
-		}
-		.more-link {
-			@include fontSizer(10);
-			font-family: $mainFont;
-			letter-spacing: 0.5px;
-			text-transform: uppercase;
-			color: white;
-			background: $pink;
-			padding: 5px;
-			&:hover {
-				background: $grey;
-				color: $pink;
-			}
+.postFooter {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border-bottom: 1px solid darken($grey, 20);
+	@include fontSizer(12);
+	align-items: center;
+	padding: 0 5px;
+	p {
+		margin: 5px 0;
+	}
+	a {
+		color: black;
+		&:hover {
+			color: $pink;
 		}
 	}
+	span {
+		padding: 0 4px;
+	}
+}
 
-	.postFooter {
+.entry-content {
+	padding: 15px;
+	p {
+		font-family: $secondFont;
+		@include fontSizer(14);
+	}
+	div {
 		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		border-bottom: 1px solid black;
-		@include fontSizer(12);
-		p {
-			margin: 5px 0;
-		}
-		a {
-			color: black;
-			&:hover {
-				color: $pink;
-			}
-		}
-		span {
-			padding: 0 4px;
+		justify-content: center;
+	}
+	.more-link {
+		@include fontSizer(14);
+		font-family: $mainFont;
+		letter-spacing: 0.5px;
+		text-transform: uppercase;
+		color: white;
+		background: $pink;
+		padding: 5px;
+		&:hover {
+			background: $grey;
+			color: $pink;
 		}
 	}
 }
 
-
+@import 'mediaQueries';

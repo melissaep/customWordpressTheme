@@ -23,12 +23,14 @@
     <p class="description">
       <?php bloginfo('description'); ?>
     </p>
-
-
-    <?php wp_nav_menu( array(
-      'theme_location' => 'primary'
-    )); ?>
-
   </div> <!-- /.container -->
+
 </header><!--/.header-->
 
+<section id="headerNav">
+  <div class="container">
+    <?php wp_nav_menu( array(
+    'theme_location' => 'primary'
+    )); ?>
+  </div>
+</section>

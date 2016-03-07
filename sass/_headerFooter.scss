@@ -18,7 +18,7 @@ footer {
 .menu-social-media-links-container,
 .menu-header-menu-container {
 	margin: 20px;
-	@include fontSizer(12);
+	@include fontSizer(16);
 }
 
 .menu {
@@ -31,7 +31,7 @@ footer {
 // **************************
 
 h1 {
-	@include fontSizer(40);
+	@include fontSizer(50);
 	font-weight: 400;
 	letter-spacing: 12px;
 
@@ -61,13 +61,24 @@ h1 {
 }
 
 p.description {
-	@include fontSizer(18);
+	@include fontSizer(20);
 	font-family: $secondFont;
 	font-weight: 100;
 
 	text-align: center;
 	text-transform: none;
 
+	margin-bottom: 0;
+}
+
+#headerNav {
+	background: white;
+	z-index: 100;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+#headerNav-sticky-wrapper {
 	margin-bottom: 50px;
 }
 
@@ -99,8 +110,16 @@ footer {
 	.menu-social-media-links-container ul li a,
 	p {
 		color: darken($grey, 20);
-		@include fontSizer(8);
+		@include fontSizer(10);
 		letter-spacing: 1px;
+	}
+
+	.menu-social-media-links-container ul li a {
+	    text-align: center;
+	    display: flex;
+	    flex-flow: row wrap;
+	    justify-content: center;
+	    align-items: center;
 	}
 
 	.fa {

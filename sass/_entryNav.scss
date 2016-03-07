@@ -1,0 +1,42 @@
+.entryNav {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-transform: uppercase;
+	margin: 20px 0 40px;
+	a {
+		color: black;
+		&:hover {
+			color: $pink;
+		}
+	}
+	.fa {
+		display: block;
+		margin-top: 10px;
+	}
+	.direction {
+		width: 50%;
+		padding: 10px 20px;
+		display: flex;
+	}
+	.older {
+		justify-content: flex-end;
+		text-align: right;
+		border-right: 1px solid black;
+	}
+	.newer {
+		justify-content: flex-start;
+		text-align: left;
+	}
+}
+
+.entryNav.navigation {
+	.direction {
+		padding: 20px;
+		flex-direction: column;
+		p {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}

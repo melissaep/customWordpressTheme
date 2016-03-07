@@ -2,7 +2,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container page">
 
     <div class="content">
     		<?php get_template_part( 'loop', 'index' );	?>

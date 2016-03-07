@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container page">
 
     <div class="content">
       <h2>Tag Archives: <?php single_tag_title(); ?></h2>

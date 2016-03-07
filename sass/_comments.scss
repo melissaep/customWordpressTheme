@@ -2,11 +2,20 @@
 	padding: 0 0 18px;
 }
 
+#comments img {
+	width: 34px;
+	height: 34px;
+}
+
+#comments h2 {
+	@include fontSizer(20);
+}
+
 h3 {
 	&#comments-title, &#reply-title {
 		color: #000000;
-		font-weight: 700;
-		font-size: 20px;
+		font-weight: 400;
+		@include fontSizer(16);
 		margin-bottom: 0;
 	}
 	&#comments-title {
@@ -181,7 +190,11 @@ h3#reply-title {
 		}
 	}
 	.form-submit {
-		margin: 0 0 24px;
+		margin: 10px 0 24px;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		input {
 			width: auto;
 			font-size: 14px;
@@ -224,4 +237,23 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
 	margin: 0;
+}
+
+footer.comment-meta {
+	display: block;
+}
+
+form.comment-form {
+	font-family: $secondFont;
+	.submit {
+		font-family: $mainFont;
+		text-transform: uppercase;
+		background: $pink;
+		border: none;
+		color: white;
+		transition: all 0.5s ease;
+		&:hover {
+			background: lighten($pink, 20);
+		}
+	}
 }

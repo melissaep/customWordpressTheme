@@ -1,0 +1,41 @@
+.singlePost {
+	.category {
+		text-transform: uppercase;
+		width: 50%;
+		p {
+			margin: 0 0 5px 0;
+		}
+		a {
+			color: black;
+			&:hover {
+				color: $pink;
+			}
+		}
+		span {
+			padding: 0 5px;
+		}
+		&::after {
+			content: '';
+			display: block;
+			border-bottom: 2px solid $grey;
+		}
+	}
+	.date {
+		font-family: $secondFont;
+		@include fontSizer(14);
+		p {
+			margin: 5px 0 0 0;
+		}
+	}
+	.postFooter {
+		border-bottom: none;
+		border-top: 1px solid darken($grey, 20);
+		p {
+			margin: 0;
+		}
+	}
+	.entry-content div.addtoany_share_save_container {
+		align-items: center;
+		margin: 0;
+	}
+}
