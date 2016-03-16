@@ -30,7 +30,7 @@
       </div>
 
 			<section class="entry-content">
-				<img src="<?php echo hackeryou_get_thumbnail_url(); ?>" alt="">
+				<img src="<?php echo hackeryou_get_thumbnail_url($post); ?>" alt="">
 				<?php the_excerpt(); ?>
 				<?php wp_link_pages( array(
           'before' => '<div class="page-link"> Pages:',

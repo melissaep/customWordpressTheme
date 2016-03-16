@@ -16,7 +16,7 @@ get_header();  ?>
 		<div class="innerWrapper">
 			<?php if ( has_post_thumbnail() ) : ?>      
 			      <figure>
-			      	<img src="<?php echo hackeryou_get_thumbnail_url();?>" alt="">
+			      	<img src="<?php echo hackeryou_get_thumbnail_url($post);?>" alt="">
 			      </figure>
 		    <?php endif; ?>
 	      <?php the_content(); ?>
